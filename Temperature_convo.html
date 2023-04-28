@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>Temperature converter</title>
+<link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+<div class="container">
+    <div class="title">
+        <h1>Temperature Converter</h1><br>
+        <span class="temperature-icon">
+        </span>
+    </div>
+    <div id="celcius" class="celcius">
+        <p style="color: #ddd; font-family:sans-serif">Enter the value in the celcius to Convert in :</p>
+            <lable style="color:#ddd;">Celcius :</lable>
+        <input type="number" placeholder="Celcius" id="Celcius" oninput="Celciusconvert(this.value)" onchange="Celciusconvert(this.value)"/>
+        <span class="icon">&#8451</span>
+    </div>
+    <div id="Fahrenheit" ><p style="color: #ddd;">Fahrenheit :   <span id="fahrenheit" class="icon">&#8457</span></p>
+    </div>
+      <div id="Kelvin"><p style="color: #ddd;">Kelvin :   <span id="kelvin" class="icon">&#8490</span></p>
+        </div>
+
+   
+</div>
+
+
+<script>
+    function Celciusconvert(value){
+
+       document.getElementById("fahrenheit").innerHTML=(value * 1.8) + 32;
+       document.getElementById("kelvin").innerHTML= (value * 1.0)+273.15;
+    
+          }
+    
+        </script>
+    </body>
+</html>
+
+
+
+
